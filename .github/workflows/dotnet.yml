@@ -4,8 +4,6 @@
 name: .NET
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -24,5 +22,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    # Will be enabled again as soon as actual Tests are implemented
+    # - name: Test
+    #   run: dotnet test --no-build --verbosity normal
